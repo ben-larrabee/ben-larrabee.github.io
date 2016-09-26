@@ -1,0 +1,88 @@
+.buttonize{
+   border-color:  #3a87ad;
+   border-style: solid;
+}
+.buttonize-sm{
+  border-width: 4px;
+  border-radius: 10px;
+  margin: 0px!important;
+}
+.buttonize-md{
+  border-width: 6px;
+  border-radius: 10px;
+}
+.bitty{
+  height: 40px;
+  padding: 0;
+}
+body{
+  background-image: url("clear-day.jpg");
+  background-size: cover;
+}
+.dressed{
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: #3a87ad solid 6px;
+  border-radius: 10px;
+  text-align: center;
+  color: white !important;
+  opacity: 0.9;
+}
+.Clear,
+.Clear-day,
+.clear-day{
+background-image: url("clear-day.jpg");
+}
+.clear-night{
+background-image: url("clear-night.jpg");
+}
+.partly-cloudy-day{
+background-image: url("partly-cloudy-day.jpg");
+
+}
+.partly-cloudy-night{
+background-image: url("partly-cloudy-night.jpg");
+
+}
+.cloudy{
+background-image: url("cloudy.jpg");
+
+}
+.rain{
+background-image: url("rain.jpg");
+
+}
+sleet{
+background-image: url("sleet.jpg");
+}
+.snow{
+background-image: url("snow.jpg");
+
+}
+.wind{
+background-image: url("wind.jpg");
+
+}
+.fog{
+background-image: url("fog.jpg");
+
+}
+.card h1{
+  color: white;
+  font-size: 60px;
+  font-weight: bolder;
+}
+.card h3{
+  color: white;
+  font-weight: bold;
+}
+.card p{
+  color: white;
+  font-size: 20px;
+}
+.centered{
+  text-align: center;
+}
+table{
+  text-align: justify;
+}

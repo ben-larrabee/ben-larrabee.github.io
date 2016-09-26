@@ -1,0 +1,146 @@
+<!DOCTYPE=html>
+<html>
+
+<head>
+  <title>Weather Project</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/gif" href="animated_favicon1.gif">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></link>
+  <link rel="stylesheet" href="cerulean.css"></link>
+  <link rel="stylesheet" href="project.css"></link>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img class = "buttonize buttonize-sm bitty" alt="Brand" src="weather_icon.png">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Location <span class="sr-only">(current)</span></a></li>
+          <li>
+              Days Forecast
+              <input type="number" name="quantity"
+              min="1" max="6" step="1" value="6" id="days-forecast">
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recent Locations <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Paintsville, KY</a></li>
+              <li><a href="#">Prestonsburg, KY</a></li>
+              <li><a href="#">Pikeville, KY</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left" id="weather-request">
+          <div class="form-group">
+            <input type="text" id = "zipcode" class="form-control" size = "45"  placeholder="Enter Zip Code or City,State" autofocus>
+          </div>
+          <button type="submit" class="btn btn-default" id="submitter" >Get Weather</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://darksky.net/poweredby">“Powered by Dark Sky”</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu API-target">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- end container-fluid -->
+  </nav>
+  <hr /><p></p>
+  <hr /><p></p>
+  <p></p>
+
+  <h1><div class="text-center" id = "location"></div></h1>  
+  <div id="putItInMe">
+  <!--The magic happens here -->
+  </div>
+  <hr />
+  <p><small class="text-muted"><span class="update">Last updated 3 mins ago</span></small></p>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="www.github.ben-larrabee.io">Home</a></li>
+  <li class="breadcrumb-item active">Weatherly</li>
+</ol>
+<!--Templates to build with-->
+<div id="rowholder" class="hider">
+  <div clas="container wrapper">
+  <div class='row padded' id ="@@row@@"></div>
+  </div>
+</div>
+
+<div id="cardholder" class ="hider">
+  <div class='col-sm-4'>
+      <div class = "card">
+        <div class = "front well dressed @@summary@@">
+            <h3 class = 'card-title'>
+              <span class='dayOfWeek'>@@dayOfWeek@@</span>
+              <p></p>
+              <span id = 'date'>@@month0@@/@@day0@@/@@year0@@</span>
+              </h3>
+            <h1><span id='currentTemp'>@@currenttemp@@</span></h1>
+            <p></p>
+            <p><span id = 'summary' class='card-text'>@@summary@@</span></p>
+            <p></p>
+            <table class = 'table' style='color:white'>
+              <tr><td>MIN</td><td>MAX</td><td>Chance of Rain</td></tr>
+              <tr><td><span id='minTemp'>@@tempMin0@@</span>&#8457;</td><td><span id='maxTemp'>@@tempMax0@@</span>&#8457;</td><td><span id='chanceRain'>@@precip0@@</span>%</td></tr>
+            </table>
+            <button class="flipper">Hourly</button>
+        </div>
+        <div class = "back well dressed">
+            <h2>Your Hourly Forecast</h2><br />
+            <h3>BIG</h3><br />
+            <table class = 'table' style='color:white'>
+              <tr><td id ="t0">@@hour0@@</td><td id ="t0Temp">@@temp0@@</td></tr>
+              <tr><td id ="t1">@@hour1@@</td><td id ="t1Temp">@@temp1@@</td></tr>
+              <tr><td id ="t2">@@hour2@@</td><td id ="t2Temp">@@temp2@@</td></tr>
+              <tr><td id ="t3">@@hour3@@</td><td id ="t3Temp">@@temp3@@</td></tr>
+              <tr><td id ="t4">@@hour4@@</td><td id ="t4Temp">@@temp4@@</td></tr>
+            </table>
+            <button class="flipper">At a Glance</button>
+        </div>
+      <!-- ^ \these cards parts are linked \-->
+      <!--<div id="hovershow1" class = "well hover" style="display:none">Something</div>-->
+    </div>
+  </div>
+</div>
+<!--End of body-->
+<div id = "extra code">
+  <!--Surprise, there's extra code beyond the base-->
+</div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
+    <!--<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="trial.js"></script>
+</body>
+
+</html>
