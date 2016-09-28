@@ -1,0 +1,73 @@
+<!DOCTYPE=html>
+<html>
+
+<head>
+  <title>Guessing Game</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css"></link>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
+  <link rel="stylesheet" href="cerulean.css"></link>
+  <link rel="stylesheet" href="guessing.css"></link>
+</head>
+
+<body>
+  <header><h1 class = "centered">Guessing Game</h1> </header>
+  <nav>
+    <ul>
+      <li><div><h3>You have <span id="remaining">10</span> attempts remaining</h3></div>
+      <div>
+        <form>
+          <label for="fdigit">First Digit</label>
+          <input type="number" id="fDigit" name="first_digit" value = "0" min = "0" max ="9">
+          </input>
+
+          <label for="sdigit">Second Digit</label>
+          <input type="number" id="sDigit" name="second-digit" value = "5" min = "0" max ="9">
+          </input>
+
+          <label for="tdigit">Third Digit</label>
+          <input type="number" id="tDigit" name="third-digit" value = "6" min = "0" max ="9">
+          </input>
+        </form>
+      </div>
+      </li>
+      <li><button id="process" class= "btn btn-primary btn-lg"><h2>GUESS</h2></button>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <section>  
+      <div class = "container">
+
+      </div>
+
+    </section>
+    <aside>
+      <p><h2> The Guessing Game</h2></p> 
+      <p>The computer has generated a random three-digit number.  The rules are simple enough, each digit between 0 - 9 are eaually possible, with the exception that no digit is used in two or more positions.  Each time you submit your choices, you will be alerted about each number that is correct, and if it's in the right spot, based on the message and color surrounding the guess.</p>
+    </aside>
+  </div>
+  <footer>Not so sure what I might put here, but it's probably a good idea to stub it.</footer>
+  <details>need to use <span class="glyphicon glyphicon-check"></span> along with the other. </details>
+  <summary></summary>
+  <div style = "display:none" id = "rowmaker">
+    <ol>
+      <li><h4>Guess @@num@@</h4></li>
+      <li><div class="panel @@match1@@"><div class="panel-heading"><h3 class="panel-title">@@desc1@@</h3></div><div class="panel-body">@@first@@</div></div></li>
+      <li><div class="panel @@match2@@"><div class="panel-heading"><h3 class="panel-title">@@desc2@@</h3></div><div class="panel-body">@@second@@</div></div></li>
+      <li><div class="panel @@match3@@"><div class="panel-heading"><h3 class="panel-title">@@desc3@@</h3></div><div class="panel-body">@@third@@</div></div></li>           
+    </ol> 
+  </div> 
+
+  <h3><div class="text-center" id = "location">Created by Ben Larrabee, TEKY1</div></h3>  
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="guessing.js"></script>
+</body>
+
+</html>
