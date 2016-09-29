@@ -1,0 +1,47 @@
+.background{
+  background-color: black;
+  color: white;
+  font-size: 40px; 
+}
+.default{
+  background-color: burlywood;
+  color: maroon;
+  font-family: Almendra SC;
+}
+.tab-props{
+  background-color: gray;
+  background-image: url("images/tic-tac.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  font-size: 20px;
+  color: black;
+  border: solid black 1px;
+  border-spacing: 0;
+  text-align: center;
+}
+tr{
+  border: solid black 1px;
+  height: 90px;
+}
+td{
+  border: solid black 1px;
+  width: 86px;
+}
+.capset{
+  font-variant: small-caps;
+}
+.centered{
+  text-align: center;
+}
+img{
+  height: 80px;
+}
+button{
+  font: 16px Helvetica;
+}
+#p1Name{
+  width: 270px;
+}
+#p2Name{
+  width: 270px;
+}

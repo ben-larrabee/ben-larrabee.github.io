@@ -1,0 +1,123 @@
+<!DOCTYPE=html>
+<html>
+  <head>
+    <script>
+      var playerOne =["Player One"];
+      var playerTwo =["Player Two"];
+      var player = playerTwo;
+      var x = "<img src='images/crossed-swords.png'>";
+      var o = "<img src='images/shield.png'>";
+      function isTL(playerHas){
+        return playerHas == "TL";
+      }
+      function isTR(playerHas){
+        return playerHas == "TR";
+      }
+      function isTM(playerHas){
+        return playerHas == "TM";
+      }
+      function isML(playerHas){
+        return playerHas == "ML";
+      }
+      function isMM(playerHas){
+        return playerHas == "MM";
+      }
+      function isMR(playerHas){
+        return playerHas == "MR";
+      }
+      function isBL(playerHas){
+        return playerHas == "BL";
+      }
+      function isBM(playerHas){
+        return playerHas == "BM";
+      }
+      function isBR(playerHas){
+        return playerHas == "BR";
+      }
+      function whoNext(cell, last){
+        if(last == playerTwo){
+          player = playerOne;
+          playerOne.push(cell);
+          document.getElementById(cell).innerHTML = x;
+        } else {
+          player = playerTwo;
+          document.getElementById(cell).innerHTML = o;
+          playerTwo.push(cell);
+        }
+        // Win Condition Testing
+        if(player.some(isTL)){
+          if( ( player.some(isTM) && player.some(isTR) ) || ( player.some(isML) && player.some(isBL) ) || ( player.some(isMM) && player.some(isBR) ) ){
+            document.getElementById("WIN").innerHTML = ("<div style=font-size:24px> " + player[0] +" wins!");
+            playerOne.pop();playerOne.pop();playerOne.pop();playerTwo.pop();playerTwo.pop();playerTwo.pop();
+          }
+        }
+        if(player.some(isTR)){
+          if( ( player.some(isMR) && player.some(isBR) ) || ( player.some(isMM) && player.some(isBL) ) ){
+            document.getElementById("WIN").innerHTML = ("<div style=font-size:24px> " + player[0] +" wins!");
+            playerOne.pop();playerOne.pop();playerOne.pop();playerTwo.pop();playerTwo.pop();playerTwo.pop();
+          }
+
+        }
+        if(player.some(isMM)){
+          if( ( player.some(isML) && player.some(isMR) ) || ( player.some(isTM) && player.some(isBM) ) ){
+            document.getElementById("WIN").innerHTML = ("<div style=font-size:24px> " + player[0] +" wins!");
+            playerOne.pop();playerOne.pop();playerOne.pop();playerTwo.pop();playerTwo.pop();playerTwo.pop();
+          }
+        }
+      }
+      function playerOneName() {
+          var name;
+          playerOne[0] = document.getElementById("p1Name").value;
+          document.getElementById("WIN").innerHTML =(playerOne[0] + " is player One");
+      }
+      function playerTwoName() {
+          var name;
+          playerTwo[0] = document.getElementById("p2Name").value;
+          document.getElementById("WIN").innerHTML = (playerTwo[0]+ " is player Two");
+      }
+    </script>
+
+    <style>
+    </style>
+
+    <title>TIC - TAC - TOE by Ben Larrabee</title>
+    <link rel="stylesheet" href="default.css">
+    <link href="https://fonts.googleapis.com/css?family=Almendra+SC"
+      rel="stylesheet"
+      type="text/css">
+  </head>
+  
+  <body class="centered default">
+    <h1>Play Tic-Tac-Toe</h1>
+    <p></p>
+    <table class="tab-props">
+      <tr>
+        <td>
+          Who will play swords?
+          <input id="p1Name">
+          <button type="button" onclick="playerOneName()">Submit</button>
+        </td>
+        <td id="TL"><button type="button" onclick="whoNext('TL', player);">SELECT</button></td>
+        <td id="TM"><button type="button" onclick="whoNext('TM', player);">SELECT</button></td>
+        <td id="TR"><button type="button" onclick="whoNext('TR', player);">SELECT</button></td>
+      </tr>
+      <tr>
+        <td>
+          Who will play shields?
+          <input id="p2Name">
+          <button type="button" onclick="playerTwoName()">Submit</button>
+        </td>
+        <td id="ML"><button type="button" onclick="whoNext('ML', player);">SELECT</button></td>
+        <td id="MM"><button type="button" onclick="whoNext('MM', player);">SELECT</button></td>
+        <td id="MR"><button type="button" onclick="whoNext('MR', player);">SELECT</button></td>
+      </tr>
+       <tr>
+        <td id="WIN">TIC-TAC-TOE</td>
+        <td id="BL"><button type="button" onclick="whoNext('BL', player);">SELECT</button></td>
+        <td id="BM"><button type="button" onclick="whoNext('BM', player);">SELECT</button></td>
+        <td id="BR"><button type="button" onclick="whoNext('BR', player);">SELECT</button></td>
+      </tr>
+    </table>
+    
+  </body>
+</html>

@@ -1,0 +1,63 @@
+
+.default{
+    color: darkolivegreen;
+    background: peachpuff;
+    background-image: url("images/old-paper.jpg");
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.buttonized{
+    border: solid 2px royalblue;
+    vertical-align: middle;
+}
+.navbar{
+    width: 100%;
+    padding: 2px 0px 2px 0px;
+    margin: 5px 0px;
+    background: slategray;
+    color: ivory ! important;
+    display: inline-block;
+}
+.banner{
+    width: 72%;
+    padding-top: 10px;
+}
+.f-right{
+    float: right;
+    padding: 10px 0px;
+    width: 21%;
+}
+.tab-prop{
+    text-align: center;
+    align-content: center;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;  
+}
+h1,h2,h3{
+    font-family: fantasy;
+    font-style: oblique;
+    font-variant: small-caps;
+}
+h1{
+    font-size: 60px;
+    padding-left: 10px;
+    text-shadow: 3px 3px darkolivegreen;
+    line-height: 0;
+    margin-bottom: 10px!important;
+}
+nav{
+    background: slategray;
+}
+ul{
+    list-style-type: none;
+    display: in
+}
+li{
+    list-style: none;
+    font-size: 18px;
+    display: table-cell;
+    padding: 6px 10px;
+}
+a{
+    color: ivory;
+}

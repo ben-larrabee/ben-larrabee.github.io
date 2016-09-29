@@ -1,0 +1,90 @@
+<!DOCTYPE=html>
+<html>
+  <head>
+    <title>Shop at Feudalmart</title>
+    <link rel="stylesheet" href="store.css">
+    <script>
+      str = "goofed up rule!";
+      sword = "<img src='images/crossed-swords.png' height = 180px ><h3><p>Ask Hrothgar about availability<br />The finest steel, the sharpest point<br />Ask Hrothgar about our money-back guarantee<br />Only 25 gold pieces!</p>";
+      shield = "<img src='images/shield.png' height = 180px ><h3><p>Hrothgar laughs at the notion of shields<br />But he's picked up many fro fallen foes<br />No warranty for shields<br />Only 20 gold pieces!</p>";
+      buckler = "<img src='images/shield_buckler.png' height = 180px ><h3><p>Leave, Hrothgar finds you offensive<br />Really, get lost.<br />Only children play with those<br />Only 5 gold pieces!</p>";
+      spear = "<img src='images/spear.png' height = 180px ><h3><p>The maiden Emily has spears<br />Perfectly balanced</p><p>She guarantees accuracy<br />Only 15 gold pieces!</p>";
+      function  update(str) {
+        document.getElementById("focus").innerHTML = str;
+      }
+    </script>
+  </head>
+  
+  <body class="default">
+    <div>
+      <h1><img style="height:79px" class="buttonized" src="images/feudalmart.jpg"> Hrothgar's FeudalMart</h1>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="http:\\www.google.com" target="_blank">Home</a></li>
+        <li><a href="tic-tac-toe.html" target="_blank">Products</a></li>
+        <li><a href="http:\\www.google.com" target="_blank">Blog</a></li>
+        <li><a href="http:\\www.google.com" target="_blank">About</a></li>
+      </ul>
+    </nav>
+    
+    <div>
+      <img class="banner" src="images/feudalmart.jpg">
+      <div id = "focus" class="f-right">
+        <img src="images/weapons.png" width=100%>
+        <h3>
+          <p>How Do I Get?<br />
+          What Can It Do?<br />
+          Does It Have A Warranty?<br />
+          How Much Is It?</p>
+        </h3>
+      </div>
+    </div>
+
+      <nav class="navbar">
+        <ul>
+          <li>Products</li>
+        </ul>
+      </nav>
+
+    <div style="width:100%">
+      <table class="tab-prop">
+        <tr>
+          <td onclick="update(sword)" style="width:25%">
+            <div>
+              <img style="width:150px" src="images/crossed-swords.png">
+              <br />
+              <h2>Swords!</h2>
+              <p>To poke your friends</p>
+            </div>
+          </td>
+          <td onclick="update(shield)" style="width:25%">
+            <div>
+              <img style="width:150px" src="images/shield.png">
+              <br />
+              <h2>Shields!</h2>
+              <p>To hide behind</p>
+            </div>
+          </td>
+          <td onclick="update(buckler)" style="width:25%">
+            <div>
+              <img style="width:150px" src="images/shield_buckler.png">
+              <br />
+              <h2>Bucklers!</h2>
+              <p>For those with poor upper body strength</p>
+            </div>
+          </td>
+          <td onclick="update(spear)" style="width:25%">
+            <div>
+              <img style="height:150px" src="images/spear.png">
+              <br />
+              <h2>Spears!</h2>
+              <p>For distance poking</p>
+            </div>
+          </td>
+        <tr>
+      </table>
+    </div>
+    
+  </body>
+</html>
