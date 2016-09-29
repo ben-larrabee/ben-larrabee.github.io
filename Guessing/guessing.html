@@ -49,7 +49,8 @@
       <p>The computer has generated a random three-digit number.  The rules are simple enough, each digit between 0 - 9 are eaually possible, with the exception that no digit is used in two or more positions.  Each time you submit your choices, you will be alerted about each number that is correct, and if it's in the right spot, based on the message and color surrounding the guess.</p>
     </aside>
   </div>
-  <footer>Not so sure what I might put here, but it's probably a good idea to stub it.</footer>
+  <footer>  <h3><div class="text-center" id = "location">Created by Ben Larrabee, TEKY1</div></h3>  
+  </footer>
   <details>need to use <span class="glyphicon glyphicon-check"></span> along with the other. </details>
   <summary></summary>
   <div style = "display:none" id = "rowmaker">
@@ -59,13 +60,18 @@
       <li><div class="panel @@match2@@"><div class="panel-heading"><h3 class="panel-title">@@desc2@@</h3></div><div class="panel-body">@@second@@</div></div></li>
       <li><div class="panel @@match3@@"><div class="panel-heading"><h3 class="panel-title">@@desc3@@</h3></div><div class="panel-body">@@third@@</div></div></li>           
     </ol> 
-  </div> 
+  </div>
+  <div style ="display:none" id = "alertmaker">
+    <div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Guessing Game says</strong> <br>@@target@@
+</div>
+</div>
 
-  <h3><div class="text-center" id = "location">Created by Ben Larrabee, TEKY1</div></h3>  
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
-    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="guessing.js"></script>
 </body>
