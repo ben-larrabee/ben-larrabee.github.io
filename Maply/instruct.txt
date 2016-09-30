@@ -11,3 +11,9 @@ User should see a marker on their location in the map.
 
 
 User should be able to add more than one location and remove other locations.
+
+1: World
+5: Landmass/continent
+10: City
+15: Streets
+20: Buildings
