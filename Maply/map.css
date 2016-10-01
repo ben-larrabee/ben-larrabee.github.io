@@ -1,6 +1,7 @@
 .buttonize{
-   border-color:  #3a87ad;
+   border-color:  #26d;
    border-style: solid;
+   box-shadow: 2px 2px #220;
 }
 .buttonize-sm{
   border-width: 4px;
@@ -15,16 +16,38 @@
   height: 40px;
   padding: 0;
 }
+nav ul{
+  list-style-type: none;
+  overflow: hidden;
+  font-size: 40px;
+  color: whitesmoke;
+  text-shadow: 2px 2px #242;
+  line-height: 36px;
+  margin: 12px 9px 0px;
+}
+nav ul li{
+  float: left;
+}
+#submitter{
+  font-size: 24px;
+  color: #222;
+  text-shadow: 2px 2px #888;
+}
 body{
   background-size: cover;
+  background-image: url("mapstyle.jpg");
 }
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
-#map {
-  height: 100%;
+.map {
+  height: 300px;
+}
+.styled {
+  background-color: #242;
+  color: #add;
 }
 #floating-panel {
   position: absolute;
@@ -48,61 +71,14 @@ html, body {
   color: white !important;
   opacity: 0.9;
 }
-.Clear,
-.Clear-day,
-.clear-day{
-background-image: url("clear-day.jpg");
-}
-.clear-night{
-background-image: url("clear-night.jpg");
-}
-.partly-cloudy-day{
-background-image: url("partly-cloudy-day.jpg");
-
-}
-.partly-cloudy-night{
-background-image: url("partly-cloudy-night.jpg");
-
-}
-.cloudy{
-background-image: url("cloudy.jpg");
-
-}
-.rain{
-background-image: url("rain.jpg");
-
-}
-sleet{
-background-image: url("sleet.jpg");
-}
-.snow{
-background-image: url("snow.jpg");
-
-}
-.wind{
-background-image: url("wind.jpg");
-
-}
-.fog{
-background-image: url("fog.jpg");
-
-}
-.card h1{
-  color: white;
-  font-size: 60px;
-  font-weight: bolder;
-}
-.card h3{
-  color: white;
-  font-weight: bold;
-}
-.card p{
-  color: white;
-  font-size: 20px;
-}
 .centered{
   text-align: center;
 }
 table{
   text-align: justify;
+}
+.close{
+  right: 4px !important;
+  opacity: 0.7 !important;
+  color: #add !important;
 }
