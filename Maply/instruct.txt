@@ -1,13 +1,13 @@
-User should be able to input any location (zip, city, or state)
+CHECK! User should be able to input any location (zip, city, or state)
 
 
-Users' location should be translated into latitude and longitude using the Google Maps Geocoding API.
+CHECK!  Users' location should be translated into latitude and longitude using the Google Maps Geocoding API.
 
 
-User should see their location in an embedded Google Map.
+CHECK! User should see their location in an embedded Google Map.
 
 
-User should see a marker on their location in the map.
+CHECK! User should see a marker on their location in the map.
 
 
 User should be able to add more than one location and remove other locations.
