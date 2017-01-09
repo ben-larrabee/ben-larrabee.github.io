@@ -1,3 +1,62 @@
 body { background-image: radial-gradient(farthest-side ellipse at right bottom, #171, black);
   overflow: hidden;
   }
+#content {
+  z-index: 1;
+}
+
+#canvas {
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+.hexagon {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  background-color: #3a4add;
+  margin: 86.60px 0;
+  box-shadow: 0 0 20px rgba(102,101,139,0.6);
+  border-left: solid 10px #e1dedc;
+  border-right: solid 10px #e1dedc;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 212.13px;
+  height: 212.13px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 33.9340px;
+  box-shadow: 0 0 20px rgba(102,101,139,0.6);
+}
+
+.hexagon:before {
+  top: -106.0660px;
+  border-top: solid 14.1421px #e1dedc;
+  border-right: solid 14.1421px #e1dedc;
+}
+
+.hexagon:after {
+  bottom: -106.0660px;
+  border-bottom: solid 14.1421px #e1dedc;
+  border-left: solid 14.1421px #e1dedc;
+}
+
+/*cover up extra shadows*/
+.hexagon span {
+  display: block;
+  position: absolute;
+  top:5.773502691896257px;
+  left: 0;
+  width:280px;
+  height:161.6581px;
+  z-index: 2;
+  background: inherit;
+}

@@ -1,6 +1,6 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var cw = canvas.width = window.innerWidth, cx = cw / 2;
+var cw = canvas.width = window.innerWidth / 2, cx = cw / 2;
 var ch = canvas.height = window.innerHeight, cy = ch / 2;
 var requestID = null;
 var balls = [];
@@ -11,11 +11,31 @@ var m = {
   x: -offset,
   y: -offset
 };
+function Bubble() {
+  this.r = 80;
+  this.h = 0;
+  this.s = 80;
+  this.Pos = {
+    x: 80,
+    y:80
+  }
+  this.update = function(m) {
+    if (dist(this.Pos, m) <= 80) {
+      console.log("You touched the bubble");
+    }
+  }
+  this.draw = function() {
+    ctx.fillStyle = Grd(this.Pos.x, this.Pos.y, this.r, this.h, this.s);
+    ctx.beginPath();
+    ctx.arc(this.Pos.x, this.Pos.y, this.r, 0, 2 * Math.PI);
+    ctx.fill();
+  }
+}
 
 function Ball() {
   this.r = Math.random() * 50 + 20;
   this.h = Math.random() * 360;
-  this.s = Math.random() * 10 + 15;
+  this.s = Math.random() * 40 + 5;
   this.isStill = true;
 
   this.Pos = {
@@ -85,6 +105,7 @@ function Ball() {
 for (var i = 0; i < numBalls; i++) {
   balls.push(new Ball());
 }
+balls.push(new Bubble());
 
 function Draw() {
   requestID = window.requestAnimationFrame(Draw);
@@ -108,6 +129,7 @@ var Init = function() {
   for (var i = 0; i < numBalls; i++) {
     balls.push(new Ball());
   }
+  balls.push(new Bubble());
   Draw();
 }
 
