@@ -1,7 +1,7 @@
 .buttonize{
    border-color:  #26d;
    border-style: solid;
-   box-shadow: 2px 2px #220;
+   box-shadow: 2px 2px 1px #220;
 }
 .buttonize-sm{
   border-width: 4px;
@@ -16,12 +16,15 @@
   height: 40px;
   padding: 0;
 }
+.navbar{
+  box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.5);
+}
 nav ul{
   list-style-type: none;
   overflow: hidden;
   font-size: 40px;
   color: whitesmoke;
-  text-shadow: 2px 2px #242;
+  text-shadow: 2px 2px 1px #242;
   line-height: 36px;
   margin: 12px 9px 0px;
 }
@@ -31,7 +34,8 @@ nav ul li{
 #submitter{
   font-size: 24px;
   color: #222;
-  text-shadow: 2px 2px #888;
+  border-radius: 5px;
+  text-shadow: 2px 2px 1px #888;
 }
 body{
   background-size: cover;
@@ -49,6 +53,7 @@ html, body {
   background-color: #242;
   color: #add;
 }
+
 #floating-panel {
   position: absolute;
   top: 60px;
@@ -74,8 +79,7 @@ html, body {
 .centered{
   text-align: center;
 }
-table{
-  text-align: justify;
+.table{
 }
 .close{
   right: 4px !important;
